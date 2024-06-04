@@ -57,19 +57,19 @@ __meta__ = {
 [node name="Button" type="Button" parent="VBoxContainer"]
 margin_right = 351.0
 margin_bottom = 39.0
-text = "Levels"
+text = "Niveles"
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
 margin_top = 44.0
 margin_right = 351.0
 margin_bottom = 83.0
-text = "Sandbox"
+text = "Espacio de pruebas"
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
 margin_top = 88.0
 margin_right = 351.0
 margin_bottom = 127.0
-text = "Quit"
+text = "Salir"
 
 [node name="Sprite" type="Sprite" parent="."]
 

@@ -29,9 +29,8 @@ git update-ref -d refs/remotes/teacher/main
 git reset --hard main
 
 echo "
-
-    Juliana
-    Martin" >> students
+    - Juliana
+    - Martin" >> students
 
 git add .
 git commit -m "Añadidos dos estudiantes"

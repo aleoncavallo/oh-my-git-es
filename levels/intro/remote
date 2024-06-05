@@ -30,8 +30,8 @@ git reset --hard main
 
 echo "
 
-    Sam
-    Alex" >> students
+    Juliana
+    Martin" >> students
 
 git add .
 git commit -m "Añadidos dos estudiantes"
@@ -44,10 +44,8 @@ test "$(git log --oneline teacher/main | wc -l)" -ge 2
 
 test "$(cat students |wc -l)" -ge 5
 # Haz commit de tu resultado.
-
-test "$(git show main |wc -l)" -ge 5
+test "$(git show main:students |wc -l)" -ge 5
 
 [win teacher]
 # ¡Y usa git push para enviarlo a tu profesora!
-
-test "$(git show main |wc -l)" -ge 5
+test "$(git show main:students |wc -l)" -ge 5

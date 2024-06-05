@@ -1,35 +1,35 @@
-title = Abort a merge
+title = Abortar una fusión
 cards = checkout commit-auto merge merge-abort
 
 [description]
 
-Sometimes you want to merge two commits, but a merge conflict occurs that you currently don't want to resolve.
+A veces quieres fusionar dos commits, pero ocurre un conflicto de fusión que actualmente no quieres resolver.
 
-In these situations you can abort the merge to merge later. Use
+En estas situaciones, puedes abortar la fusión para fusionarla más tarde. Usa
     git merge --abort
-when you are in a merge process.
+cuando estés en un proceso de fusión.
 
-Try to merge both commits and abort the merge afterwards.
+Intenta fusionar ambos commits y luego abortar la fusión.
 
 [setup]
 
-echo "A new day is starting" > you
+echo "Un nuevo día está comenzando" > you
 
 git add .
-git commit -m "Start"
+git commit -m "Inicio"
 
-echo "Walking down the Main Lane." >> you
+echo "Caminando por el Carril Principal." >> you
 
 git add .
-git commit -m "Main Lane"
+git commit -m "Carril Principal"
 
 
 git checkout HEAD~1
 
-echo "Walking down the Side Lane." >> you
+echo "Caminando por el Carril Lateral." >> you
 
 git add .
-git commit -m "Side Lane"
+git commit -m "Carril Lateral"
 
 git checkout HEAD~1
 
@@ -43,12 +43,12 @@ fi
 
 [win]
 
-# You tried to merge?
+# ¿Intentaste fusionar?
 test -f .git/secretfile
 
-# You aborted to merge?
+# ¿Abortaste la fusión?
 test -f .git/secretfile && ! test -f .git/MERGE_HEAD && ! git rev-parse HEAD^^
 
 [congrats]
 
-Aaah, let's merge later...
+Aaah, vamos a fusionar más tarde...

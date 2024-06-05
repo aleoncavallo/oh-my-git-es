@@ -15,7 +15,6 @@ rm -rf .git
 
 [win]
 # Inicializa la máquina del tiempo!
-
 test -d .git
 
 [congrats]

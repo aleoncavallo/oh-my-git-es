@@ -22,26 +22,26 @@ También puedes retroceder dos commits escribiendo, por ejemplo:
 [setup]
 
 mkdir jaula
-echo "Se ve muy hambriento." > jaula/león
+echo "Se ve muy hambriento." > jaula/tigre
 
-echo "Un niño pequeño.
-¡Realmente ama a los gatos!" > niño
+echo "Un infante pequeño.
+¡Que realmente ama a los gatos!" > infante 
 git add .
 git commit -m "El comienzo"
 
-echo "Está sosteniendo una paleta." >> niño
-git commit -am "El niño compra algo"
+echo "Está sosteniendo un chupetin." >> infante
+git commit -am "El infante compra algo"
 
-mv niño jaula
+mv infante jaula
 git add .
-git commit -m "El niño trepa a algún lugar"
+git commit -m "El infante trepa a algún lugar"
 
-git rm jaula/niño
-echo "Se ve feliz. :)" > jaula/león
+git rm jaula/infante
+echo "Se ve feliz. :)" > jaula/tigre
 git add .
 git commit -m "Oh no"
 
-echo "Está durmiendo." > jaula/león
+echo "Está durmiendo." > jaula/tigre
 git add .
 git commit -m "¡Hora de la siesta!"
 
@@ -50,11 +50,11 @@ git branch -d main
 
 [win]
 
-# Asegúrate de que el niño esté feliz.
-git ls-tree --name-only -r HEAD | grep niño
+# Asegúrate de que el infante esté feliz.
+git ls-tree --name-only -r HEAD | grep infante
 
-# Asegúrate de que el león consiga algo para comer.
-git show HEAD:jaula/león | grep -v "muy hambriento"
+# Asegúrate de que el tigre consiga algo para comer.
+git show HEAD:jaula/tigre | grep -v "muy hambriento"
 
 [congrats]
 

@@ -23,13 +23,13 @@ git commit -m "Preparativos de la noche"
 echo "¡Vas a la fiesta de cumpleaños!" >> you
 git add .
 git commit -m "Ir a la fiesta de cumpleaños"
-git branch birthday
+git branch cumple
 
 git checkout HEAD~1
 echo "¡Vas al concierto!" > you
 git add .
 git commit -m "Ir al concierto"
-git branch concert
+git branch concierto
 
 git checkout HEAD~1
 
@@ -39,11 +39,11 @@ git branch -D main
 
 # Viaja directamente al último commit amarillo de la línea temporal del cumpleaños, haz un cambio en 'you' y haz un commit
 for commit in $(git cat-file --batch-check='%(objectname) %(objecttype)' --batch-all-objects | grep 'commit$' | cut -f1 -d' '); do
-    if test $(git rev-parse $commit^) = $(git rev-parse birthday); then
+    if test $(git rev-parse $commit^) = $(git rev-parse cumple); then
         return 0
     fi
 done
 return 1
 
-# Viaja a la rama 'concert' azul, haz un cambio en 'you' y un commit.
-git show concert^ | grep "Ir al concierto"
+# Viaja a la rama 'concierto' azul, haz un cambio en 'you' y un commit.
+git show concierto^ | grep "Ir al concierto"

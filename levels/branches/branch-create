@@ -34,8 +34,8 @@ git branch -D main
 # Crea una rama llamada 'cumple' que apunte a la línea temporal del cumpleaños.
 git show cumple | grep 'al cumple'
 
-# Crea una rama llamada 'concert' que apunte a la línea temporal del concierto.
-git show concert | grep 'al concierto'
+# Crea una rama llamada 'concierto' que apunte a la línea temporal del concierto.
+git show concierto | grep 'al concierto'
 
 [congrats]
 

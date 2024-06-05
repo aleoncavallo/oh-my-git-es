@@ -9,7 +9,7 @@ Para hacer más fácil distinguir qué línea temporal es cuál, ¡puedes crear 
 
 [cli]
 
-¡Las ramas también facilitan mucho viajar entre diferentes lugares usando la línea de comandos! Tan pronto como tengas una rama llamada "birthday", ¡puedes escribir `git checkout birthday` para viajar a ella!
+¡Las ramas también facilitan mucho viajar entre diferentes lugares usando la línea de comandos! Tan pronto como tengas una rama llamada "cumple", ¡puedes escribir `git checkout cumple` para viajar a ella!
 
 [setup]
 
@@ -18,7 +18,7 @@ git add .
 git commit -m "Preparativos de la noche"
 echo "¡Vas a la fiesta de cumpleaños!" >> you
 git add .
-git commit -m "Ir a la fiesta de cumpleaños"
+git commit -m "Ir al cumple"
 
 git checkout HEAD~1
 echo "¡Vas al concierto!" > you
@@ -31,8 +31,8 @@ git branch -D main
 
 [win]
 
-# Crea una rama llamada 'birthday' que apunte a la línea temporal del cumpleaños.
-git show birthday | grep 'a la fiesta de cumpleaños'
+# Crea una rama llamada 'cumple' que apunte a la línea temporal del cumpleaños.
+git show cumple | grep 'al cumple'
 
 # Crea una rama llamada 'concert' que apunte a la línea temporal del concierto.
 git show concert | grep 'al concierto'
